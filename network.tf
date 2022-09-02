@@ -16,8 +16,7 @@ resource "aws_subnet" "ahmed_vpc_public_subnet" {
     Name = "ahmed_vpc"
   }
 }
-
-    resource "aws_subnet" "ahmed_vpc_private-subnet" {
+resource "aws_subnet" "ahmed_vpc_private-subnet" {
   vpc_id     = aws_vpc.ahmed_vpc.id
   cidr_block = "10.0.1.0/24"
   availability_zone = "us-east-1a"
