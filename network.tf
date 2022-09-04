@@ -1,4 +1,4 @@
-resource "aws_vpc" "ahmed_vpc" {
+resource "aws_vpc" "ahmed" {
   cidr_block       = "${var.vpc_cidr}"
 
   instance_tenancy = "default"
@@ -8,7 +8,7 @@ resource "aws_vpc" "ahmed_vpc" {
   }
 }
 resource "aws_subnet" "ahmed_public_subnet-1" {
-  vpc_id     = "${aws_vpc.ahmed_vpc.id}"
+  vpc_id     = "${aws_vpc.ahmed.id}"
   cidr_block = "${var.ahmed_vpc_public_subnet-1}"
   availability_zone = "${var.region}a"
   
@@ -18,7 +18,7 @@ resource "aws_subnet" "ahmed_public_subnet-1" {
   }
 }
 resource "aws_subnet" "ahmed_public_subnet-2" {
-  vpc_id     = "${aws_vpc.ahmed_vpc.id}"
+  vpc_id     = "${aws_vpc.ahmed.id}"
   cidr_block = "${var.ahmed_vpc_public_subnet-2}"
   availability_zone = "${var.region}b"
  
@@ -27,7 +27,7 @@ resource "aws_subnet" "ahmed_public_subnet-2" {
   }
 }
 resource "aws_subnet" "ahmed_public_subnet-3" {
-  vpc_id     = "${aws_vpc.ahmed_vpc.id}}"
+  vpc_id     = "${aws_vpc.ahmed.id}}"
   cidr_block = "${var.ahmed_vpc_public_subnet-3}"
   availability_zone = "${var.region}c"
   
