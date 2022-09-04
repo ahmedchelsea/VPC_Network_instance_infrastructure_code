@@ -7,7 +7,7 @@ resource "aws_vpc" "ahmed_vpc" {
     Name = "${var.environment}-VPC"
   }
 }
-resource "aws_subnet" "ahmed_vpc_public_subnet-1" {
+resource "aws_subnet" "ahmed_public_subnet-1" {
   vpc_id     = "${aws_vpc.ahmed_vpc.id}"
   cidr_block = "${var.ahmed_vpc_public_subnet-1}"
   availability_zone = "${var.region}a"
@@ -17,7 +17,7 @@ resource "aws_subnet" "ahmed_vpc_public_subnet-1" {
     Name = "${var.environment}-public_subnet-1"
   }
 }
-resource "aws_subnet" "ahmed_vpc_public_subnet-2" {
+resource "aws_subnet" "ahmed_public_subnet-2" {
   vpc_id     = "${aws_vpc.ahmed_vpc.id}"
   cidr_block = "${var.ahmed_vpc_public_subnet-2}"
   availability_zone = "${var.region}b"
@@ -26,7 +26,7 @@ resource "aws_subnet" "ahmed_vpc_public_subnet-2" {
     Name = "${var.environment}-public_subnet-2"
   }
 }
-resource "aws_subnet" "ahmed_vpc_public_subnet-3" {
+resource "aws_subnet" "ahmed_public_subnet-3" {
   vpc_id     = "${aws_vpc.ahmed_vpc.id}}"
   cidr_block = "${var.ahmed_vpc_public_subnet-3}"
   availability_zone = "${var.region}c"
