@@ -32,6 +32,6 @@ resource "aws_subnet" "ahmed_vpc_public_subnet-3" {
   availability_zone = "${var.region}c"
   
   tags = {
-    Name = "${var.enviroment}-public_subnet-3"
+    Name = "${var.environment}-public_subnet-3"
   }
 }
