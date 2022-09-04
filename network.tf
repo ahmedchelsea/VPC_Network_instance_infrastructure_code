@@ -26,3 +26,12 @@ resource "aws_subnet" "ahmed_vpc_public_subnet-2" {
     Name = "${var.environment}-public_subnet-2"
   }
 }
+resource "aws_subnet" "ahmed_vpc_public_subnet-3" {
+  vpc_id     = "${aws_vpc.ahmed_vpc.id}}"
+  cidr_block = "${var.ahmed_vpc_public_subnet-3}"
+  availability_zone = "${var.region}c"
+  
+  tags = {
+    Name = "${var.enviroment}-public_subnet-3"
+  }
+}
