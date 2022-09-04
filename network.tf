@@ -27,7 +27,7 @@ resource "aws_subnet" "ahmed_public_subnet-2" {
   }
 }
 resource "aws_subnet" "ahmed_public_subnet-3" {
-  vpc_id     = "${aws_vpc.ahmed.id}}"
+  vpc_id     = "${aws_vpc.ahmed.id}"
   cidr_block = "${var.ahmed_vpc_public_subnet-3}"
   availability_zone = "${var.region}c"
   
