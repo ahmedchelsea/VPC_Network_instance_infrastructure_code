@@ -39,7 +39,10 @@ resource "aws_route_table" "public-route-table" {
   vpc_id = "${aws_vpc.ahmed.id}"
 }
 
- tags = {
- Name = "${var.environment}-Public-routetable"
+ tags = { 
+ Name = "${var.environment}-Public-Routetable"
 }
-  
+resource "aws_route_table_association" "public-route-1-association" {
+  route_table_id = "${aws_route_table.public-route-table.id}"
+  subnet_id      = "${aws_subnet.ahmed_public-subnet-1.id}"
+}
