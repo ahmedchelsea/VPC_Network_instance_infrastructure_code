@@ -38,7 +38,9 @@ resource "aws_subnet" "ahmed_public_subnet-3" {
 resource "aws_route_table" "public-route=table" {
   vpc_id = "${aws_vpc.ahmed.id}"
 
-  tags = {
+  }
+ 
+ tags = {
     Name = "${var.environment}"-Public-routetable 
 }
   
