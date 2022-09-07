@@ -41,6 +41,5 @@ resource "aws_route" "public_route" {
   destination_cidr_block    = "${var.ahmed_vpc_public_subnet-1}"
 }
 
-{
-    Name = "{var.environment}-public_route"
+{ Name = "{var.environment}-public_route"
 }
