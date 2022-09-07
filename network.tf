@@ -36,6 +36,6 @@ resource "aws_subnet" "ahmed_public_subnet-3" {
 }
 
 resource "aws_route" "public_route" {
-  route_table_id            = "${public-route-table"
-  destination_cidr_block    = "${var.ahmed_public_subnet-1}"
+  route_table_id            = "${aws_route.public-route-table}"
+  destination_cidr_block    = "${var.ahmed_vpc_public_subnet-1}"
 }
