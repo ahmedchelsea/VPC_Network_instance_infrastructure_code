@@ -40,3 +40,7 @@ resource "aws_route" "public_route" {
   route_table_id            = "${aws_route.public-route-table}"
   destination_cidr_block    = "${var.ahmed_vpc_public_subnet-1}"
 }
+
+ tags= {
+    Name = "{var.environment}-public_route"
+}
