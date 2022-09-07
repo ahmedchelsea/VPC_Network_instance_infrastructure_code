@@ -34,7 +34,7 @@ resource "aws_subnet" "ahmed_public_subnet-3" {
   tags = {
     Name = "${var.environment}-public_subnet-3"
   }
-}
+
 resource "aws_route" "public_route" {
   route_table_id            = "${public-route-table"
   destination_cidr_block    = "${var.vpc_cidr}"
