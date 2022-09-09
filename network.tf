@@ -40,4 +40,7 @@ resource "aws_route_table" "public-route-table" {
     Name = "${var.environment}-public-route-table"
    }   
 }
-
+resource "aws_route_table_association" "public-route-association-1" {
+  route_table_id = "${aws_route_table.public-route-table.id}"
+  subnet_id      = "${aws_subnet.public-subnet-1.id}"
+}

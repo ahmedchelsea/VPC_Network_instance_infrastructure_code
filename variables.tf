@@ -14,5 +14,8 @@ variable "region" {
     description = "us east 1"
 }
 variable "environment" {
-  default = "Development"
+  default = "ahmed"
+}
+variable "ahmed_private_subnet-1" {
+description = "Private subnet 1 cidr block"
 }
