@@ -107,7 +107,7 @@ resource "aws_nat_gateway" "ahmed_nat-gw" {
   tags = {
     Name = "${var.environment}-NATGW"
   }
-  depends_on = [aws_eip.elastic-ip-for-nat-gw]
+  depends_on = [aws_eip.elastic-ip-for-ahmed_nat-gw]
 }
 resource "aws_route" "nat-gw-route" {
   route_table_id         = "${aws_route_table.private-route-table.id}"
