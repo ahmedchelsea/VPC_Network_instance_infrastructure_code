@@ -8,7 +8,7 @@ data "aws_ami" "amazon-Linux-2" {
     ]
   }
 }
-  filter {
+filter {
     name = "owner-alias"
     values = [
       "amazon",
