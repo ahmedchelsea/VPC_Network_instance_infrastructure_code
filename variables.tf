@@ -25,5 +25,12 @@ variable "ahmed_private_subnet-2" {
 variable "ahmed_private_subnet-3" {
   description = "Private subnet 3 cidr block"
 }
-
-
+variable  "instance_type"{
+  description = "t2.micro"
+}
+variable "instance_ami" {
+description = "amazon machine image"
+}
+variable "keyname" {
+  description = "ahmed"
+}
