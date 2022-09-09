@@ -76,3 +76,9 @@ resource "aws_subnet" "ahmed_private_subnet-3" {
     Name = "${var.environment}-Private-Subnet-3"
   }
 }
+resource "aws_route_table" "private-route-table" {
+  vpc_id = "${aws_vpc.ahmed.id}"
+  tags = {
+    Name = "${var.environment}-private-route-table"
+  }
+}
