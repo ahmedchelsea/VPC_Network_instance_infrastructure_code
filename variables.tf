@@ -23,7 +23,7 @@ variable "ahmed_private_subnet-2" {
   description = "Private subnet 2 cidr block"
 }
 variable "ahmed_private_subnet-3" {
-  description = "P"
+  description = "Private subnet 3 cidr block"
 }
 
 

@@ -50,5 +50,5 @@ resource "aws_route_table_association" "public-route-association-2" {
 }
 resource "aws_route_table_association" "public-route-association-3" {
   route_table_id = "${aws_route_table.public-route-table.id}"
-  subnet_id      = "${aws_subnet.ahmed_public_subnet-2.id}"
+  subnet_id      = "${aws_subnet.ahmed_public_subnet-3.id}"
 }
