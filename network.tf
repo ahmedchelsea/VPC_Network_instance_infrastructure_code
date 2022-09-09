@@ -60,11 +60,19 @@ resource "aws_subnet" "ahmed_private_subnet-1" {
     Name = "${var.environment}-Private-Subnet-1"
   }
 }
-resource "aws_subnet" "ahmed_private-subnet-2" {
+resource "aws_subnet" "ahmed_private_subnet-2" {
   cidr_block        = "${var.ahmed_private_subnet-2}"
   vpc_id            = "${aws_vpc.ahmed.id}"
   availability_zone = "${var.region}b"
   tags = {
     Name = "${var.environment}-Private-Subnet-2"
+  }
+}
+resource "aws_subnet" "ahmed_private_subnet-3" {
+  cidr_block        = "${var.ahmed_private_subnet-3}"
+  vpc_id            = "${aws_vpc.ahmed.id}"
+  availability_zone = "${var.region}c"
+  tags = {
+    Name = "${var.environment}-Private-Subnet-3"
   }
 }
