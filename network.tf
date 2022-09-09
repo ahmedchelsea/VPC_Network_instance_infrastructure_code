@@ -114,4 +114,10 @@ resource "aws_route" "nat-gw-route" {
   nat_gateway_id         = "${aws_nat_gateway.nat-gw.id}"
   destination_cidr_block = "0.0.0.0/0"
 }
+resource "aws_internet_gateway" "ahmed-igw" {
+  vpc_id = "${aws_vpc.ahmed.id}"
+  tags = {
+    Name = "${var.environment}-IGW"
+  }
+}
 
