@@ -19,3 +19,11 @@ variable "environment" {
 variable "ahmed_private_subnet-1" {
 description = "Private subnet 1 cidr block"
 }
+variable "ahmed_private_subnet-2" {
+  description = "Private subnet 2 cidr block"
+}
+variable "ahmed_private_subnet-3" {
+  description = "P"
+}
+
+
