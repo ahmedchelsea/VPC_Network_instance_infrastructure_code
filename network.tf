@@ -94,3 +94,10 @@ resource "aws_route_table_association" "private-route-association-3" {
   route_table_id = "${aws_route_table.private-route-table.id}"
   subnet_id      = "${aws_subnet.ahmed_private_subnet-3.id}"
 }
+resource "aws_eip" "elastic-ip-for-nat-gw" {
+  vpc                       = true
+  associate_with_private_ip = "10.0.0.5"
+  tags = {
+    Name = "${var.environment}-EIP"
+  }
+}
