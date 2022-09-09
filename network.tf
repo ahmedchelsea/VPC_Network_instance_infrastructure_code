@@ -52,3 +52,11 @@ resource "aws_route_table_association" "public-route-association-3" {
   route_table_id = "${aws_route_table.public-route-table.id}"
   subnet_id      = "${aws_subnet.ahmed_public_subnet-3.id}"
 }
+resource "aws_subnet" "ahmed_private_subnet-1" {
+  cidr_block        = "${var.ahmed_private_subnet-1}"
+  vpc_id            = "${aws_vpc.ahmed.id}"
+  availability_zone = "${var.region}a"
+  tags = {
+    Name = "${var.environment}-Private-Subnet-1"
+  }
+}
