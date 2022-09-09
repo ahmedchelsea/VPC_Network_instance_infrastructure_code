@@ -7,12 +7,12 @@ data "aws_ami" "amazon-Linux-2" {
       "amzn2-ami-hvm-*-x86_64-gp2",
     ]
   }
-}
-filter {
+    filter {
     name = "owner-alias"
     values = [
       "amazon",
     ]
+}
 }
 resource "aws_instance" "ahmed-instance-ec2" {
   ami             = "${data.aws_ami.amazon-Linux-2.id}"
