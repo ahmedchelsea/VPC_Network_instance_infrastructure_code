@@ -111,7 +111,7 @@ resource "aws_nat_gateway" "ahmed_nat-gw" {
 }
 resource "aws_route" "nat-gw-route" {
   route_table_id         = "${aws_route_table.private-route-table.id}"
-  nat_gateway_id         = "${aws_nat_gateway.nat-gw.id}"
+  nat_gateway_id         = "${aws_nat_gateway.ahmed_nat-gw.id}"
   destination_cidr_block = "0.0.0.0/0"
 }
 resource "aws_internet_gateway" "ahmed-igw" {
