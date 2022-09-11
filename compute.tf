@@ -33,7 +33,7 @@ resource "aws_security_group" "sg-ahmed" {
   name        = "ssh-ahmed-instance-ec2"
   description = "Allow SSH and ahmed-instane-ec2 inbound traffic"
   vpc_id      = "${aws_vpc.ahmed.id}"
-}
+
   ingress {
     from_port   = 22
     to_port     = 22
@@ -65,3 +65,5 @@ resource "aws_security_group" "sg-ahmed" {
     protocol        = "-1"
     cidr_blocks     = ["0.0.0.0/0"]
   }
+
+}
