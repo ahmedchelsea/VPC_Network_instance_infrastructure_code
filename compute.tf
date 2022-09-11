@@ -15,7 +15,7 @@ data "aws_ami" "amazon-Linux-2" {
  }
 }
 resource "aws_instance" "ahmed-instance-ec2" {
-  ami             = "${data.aws_ami.amazon-Linux-2.id}"
+  ami_id            = "${data.aws_ami.amazon-Linux-2.id}"
   instance_type   = "${var.instance_type}"
   key_name        = "${var.keyname}"
   #vpc_id          = "${aws_vpc.ahmed.id}"
