@@ -32,5 +32,5 @@ variable "instance_ami" {
 description = "amazon machine image"
 }
 variable "keyname" {
-  description = "ahmed"
+  description = "ahmed1"
 }

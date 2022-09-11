@@ -9,5 +9,5 @@ ahmed_private_subnet-2 = "10.0.11.0/24"
 ahmed_private_subnet-3 = "10.0.12.0/24"
 instance_ami = "ami-0c6b1d09930fac512"
 instance_type = "t2.micro"
-keyname = "ahmed"
+keyname = "ahmed1"
  # "${}" calls variables ("${var.region}") and attributes of resources ("${aws_vpc.ahmed}"")
