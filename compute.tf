@@ -19,7 +19,7 @@ resource "aws_instance" "ahmed-instance-ec2" {
   instance_type   = "${var.instance_type}"
   key_name        = "${var.keyname}"
   #vpc_id          = "${aws_vpc.ahmed.id}"
-  vpc_security_group_ids = ["${aws_security_group.sg_allow_ssh_ahmed-instance-ec2.id}"]
+  vpc_security_group_ids = ["${aws_security_group.sg-ahmed.id}"]
   subnet_id          = "${aws_subnet.ahmed_public_subnet-1.id}"
   #name            = "${var.name}"
   user_data = "${file("yum_package.sh")}"
