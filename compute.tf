@@ -40,7 +40,7 @@ ingress {
     protocol    = "SSH"
     cidr_blocks = ["0.0.0.0/0"]
   }
-    ingress {
+ingress {
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
@@ -52,14 +52,14 @@ ingress {
     protocol    = "HTTP"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  ingress {
+ingress {
     from_port   = 443
     to_port     = 443
     protocol    = "HTTPS"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  egress {
+egress {
     from_port       = 0
     to_port         = 0
     protocol        = "-1"
