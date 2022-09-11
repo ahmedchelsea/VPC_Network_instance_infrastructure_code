@@ -15,21 +15,21 @@ data "aws_ami" "amazon-Linux-2" {
  }
 }
 resource "aws_instance" "ahmed-instance-ec2" {
-  ami             = "${data.aws_ami.ahmed-instance-ec2.id}"
-  instance_type   = "t2.micro"
+  ami             = "${data.aws_ami.amazon-Linux-2}"
+  instance_type   = "${var.instance_type}"
   key_name        = "${var.keyname}"
   #vpc_id          = "${aws_vpc.ahmed.id}"
   vpc_security_group_ids = ["${aws_security_group.sg_allow_ssh_ahmed-instance-ec2.id}"]
   subnet_id          = "${aws_subnet.ahmed_public_subnet-1.id}"
   #name            = "${var.name}"
-  user_data = "${file("Data_install_ahmed-instance-ec2.sh")}"
+  user_data = "${file("yum_package.sh")}"
 
   associate_public_ip_address = true
   tags = {
     Name = "ahmed-instance-ec2"
   }
 }
-resource "aws_security_group" "sg_ahmed" {
+resource "aws_security_group" "sg-ahmed" {
   name        = "ssh-ahmed-instance-ec2"
   description = "Allow SSH and ahmed-instane-ec2 inbound traffic"
   vpc_id      = "${aws_vpc.ahmed.id}"
